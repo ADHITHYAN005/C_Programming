@@ -2,18 +2,17 @@
 
 int main()
 {
-    int num, tens, ones;
+    int i, sum = 0;
 
-    for(num = 10; num <= 99; num++)
+    for(i = 10; i <= 99; i++)
     {
-        tens = num / 10;   
-        ones = num % 10;   
-
-        if(tens + ones == 6)
+        if(i % 10 == 5)   // Check one's digit
         {
-            printf("%d ", num);
+            sum = sum + i;
         }
     }
+
+    printf("Sum = %d", sum);
 
     return 0;
 }
